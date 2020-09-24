@@ -13,14 +13,16 @@ function Home() {
         />
         <div className="home__row">
           <Product
+            id="123321"
             title="PS4 Controller, PS4 Remote, PS4 Joystick, Wireless PS4 Controller Compatible for Playstation 4 (Red)"
-            price={39.99}
+            price={499.99}
             image="https://images-na.ssl-images-amazon.com/images/I/61sGVkv5NVL._AC_SX466_.jpg"
             rating={4}
           />
           <Product
+            id="456654"
             title="The ROG Strix XG49VQ is a super ultra-wide 49” Dual full HD gaming monitor with a smooth 144Hz refresh rate that offers the ultimate immersive gaming"
-            price={50.0}
+            price={299.99}
             image="https://images-na.ssl-images-amazon.com/images/I/71PjhKA%2BllL._AC_SX466_.jpg"
             rating={5}
           />
@@ -28,20 +30,23 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="789987"
             title="PADY-Wearable Technology Honor Band 4 6-Axis Inertial Heart Rate Monitor. Infrared Light Wear Detection Sensor Full Touch"
-            price={25.99}
+            price={388.99}
             image="https://images-na.ssl-images-amazon.com/images/I/51B7xN1C5RL._AC_SX425_.jpg"
             rating={4}
           />
           <Product
+            id="147741"
             title="Combatwing Gaming Headset- Xbox 360 Headset PS4 Headset PC Headset with Noice Cancelling Mic"
-            price={23.5}
+            price={199.99}
             image="https://images-na.ssl-images-amazon.com/images/I/71HFFgckuFL._AC_SL1267_.jpg"
             rating={4}
           />
           <Product
+            id="852258"
             title="Apple watch series 5(GPS,44MM) - Space Gray Aluminium Case with Black Sport Band"
-            price={21.99}
+            price={220.99}
             image="https://images-na.ssl-images-amazon.com/images/I/71mbZF8PT1L._AC_SX569_.jpg"
             rating={5}
           />
@@ -49,8 +54,9 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="369963"
             title="Adding to the Amazon Echo Family: Echo Dot and Amazon Tap "
-            price={35.99}
+            price={1050.99}
             image="https://miro.medium.com/max/1178/1*wG7KYb1fGEyBcWS6ohx-1Q.jpeg"
             rating={5}
           />
