@@ -5,6 +5,7 @@ import ShoppingBascketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+import { AnimationWrapper } from "react-hover-animation";
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -31,16 +32,18 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to={!user && "/login"}>
-          <div onClick={handleAuthentication} className="header__option">
-            <span className="header__optionLineOne">
-              Hello {user ? user.email : "Guest"}
-            </span>
-            <span className="header__optionLineTwo">
-              {user ? "Sign Out" : "Sign In"}
-            </span>
-          </div>
-        </Link>
+        <AnimationWrapper>
+          <Link to={!user && "/login"}>
+            <div onClick={handleAuthentication} className="header__option">
+              <span className="header__optionLineOne">
+                Hello {user ? user.email : "Guest"}
+              </span>
+              <span className="header__optionLineTwo">
+                {user ? "Sign Out" : "Sign In"}
+              </span>
+            </div>
+          </Link>
+        </AnimationWrapper>
 
         <div className="header__option">
           <span className="header__optionLineOne">Returns</span>
@@ -52,14 +55,16 @@ function Header() {
           <span className="header__optionLineTwo">Prime </span>
         </div>
 
-        <Link to="/checkout">
-          <div className="header__optionBasket">
-            <ShoppingBascketIcon />
-            <span className="header__optionLineTwo header__basketCount">
-              {basket?.length}
-            </span>
-          </div>
-        </Link>
+        <AnimationWrapper>
+          <Link to="/checkout">
+            <div className="header__optionBasket">
+              <ShoppingBascketIcon />
+              <span className="header__optionLineTwo header__basketCount">
+                {basket?.length}
+              </span>
+            </div>
+          </Link>
+        </AnimationWrapper>
       </div>
     </div>
   );

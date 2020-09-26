@@ -1,6 +1,7 @@
 import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
+import { AnimationWrapper } from "react-hover-animation";
 
 function CheckoutProduct({ id, image, title, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -29,7 +30,19 @@ function CheckoutProduct({ id, image, title, price, rating }) {
               <p> ⭐</p>
             ))}
         </div>
-        <button onClick={removeFromBasket}>Remove from Basket</button>
+
+        <AnimationWrapper
+          style={{
+            cursor: onmousemove,
+          }}
+        >
+          <button
+            className="checkoutProduct__removeButton"
+            onClick={removeFromBasket}
+          >
+            Remove from Basket
+          </button>
+        </AnimationWrapper>
       </div>
     </div>
   );

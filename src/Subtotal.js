@@ -3,6 +3,7 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
+import { AnimationWrapper } from "react-hover-animation";
 
 function Subtotal() {
   const [{ basket }, dispatch] = useStateValue();
@@ -28,7 +29,15 @@ function Subtotal() {
         prefix={"$"}
       />
 
-      <button>Proceed to Checkout</button>
+      <AnimationWrapper
+        style={{
+          cursor: onmousemove,
+        }}
+      >
+        <button className="subtotal__checkoutButton">
+          Proceed to Checkout
+        </button>
+      </AnimationWrapper>
     </div>
   );
 }

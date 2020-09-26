@@ -2,6 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import "./Login.css";
 import { auth } from "./firebase";
+import { AnimationWrapper } from "react-hover-animation";
 
 function Login() {
   //allows to programatically change the URL
@@ -63,13 +64,19 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
 
-          <button
-            onClick={signIn}
-            type="submit"
-            className="login__signInButton"
+          <AnimationWrapper
+            style={{
+              cursor: onmousemove,
+            }}
           >
-            Sign In
-          </button>
+            <button
+              onClick={signIn}
+              type="submit"
+              className="login__signInButton"
+            >
+              Sign In
+            </button>
+          </AnimationWrapper>
         </form>
 
         <p>
@@ -78,9 +85,15 @@ function Login() {
           Interest-Based Ads Notice.
         </p>
 
-        <button onClick={register} className="login__registerButton">
-          Create your Amazon Account
-        </button>
+        <AnimationWrapper
+          style={{
+            cursor: onmousemove,
+          }}
+        >
+          <button onClick={register} className="login__registerButton">
+            Create your Amazon Account
+          </button>
+        </AnimationWrapper>
       </div>
     </div>
   );

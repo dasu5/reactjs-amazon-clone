@@ -1,6 +1,7 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import { AnimationWrapper } from "react-hover-animation";
 
 function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -40,7 +41,15 @@ function Product({ id, title, image, price, rating }) {
 
       <img src={image} alt="" />
 
-      <button onClick={addToBasket}>Add to Basket</button>
+      <AnimationWrapper
+        style={{
+          cursor: onmousemove,
+        }}
+      >
+        <button className="product__addToBasketButton" onClick={addToBasket}>
+          Add to Basket
+        </button>
+      </AnimationWrapper>
     </div>
   );
 }

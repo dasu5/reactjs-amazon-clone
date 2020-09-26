@@ -1,16 +1,19 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import { Animated } from "react-animated-css";
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://www.overons.kpn/images/news/_1280xAUTO_crop_center-center_none/Amazon-Prime-Video.jpg"
-          alt=""
-        />
+        <Animated animationIn="slideInRight" isVisible={true}>
+          <img
+            className="home__image"
+            src="https://clickitornot.com/wp-content/uploads/2020/03/Amazon-prime-video.jpg"
+            alt="home image"
+          />
+        </Animated>
         <div className="home__row">
           <Product
             id="123321"
@@ -65,5 +68,5 @@ function Home() {
     </div>
   );
 }
-//https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_Sy400_.jpg
+
 export default Home;

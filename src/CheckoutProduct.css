@@ -23,7 +23,7 @@
   display: flex;
 }
 
-.checkoutProduct__info > button {
+.checkoutProduct__removeButton {
   background: #f0c14b;
   border: 1px solid;
   margin-top: 10px;
